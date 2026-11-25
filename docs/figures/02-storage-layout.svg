@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="624" viewBox="0 0 960 624" role="img" aria-labelledby="t d"><title id="t">BitFSAI storage layout</title><desc id="d">Standard FSAI stores a separate lower-triangular factor with its own index arrays. BitFSAI stores an FP32 diagonal and row scale per row plus a 4-bit nibble mirrored in A's own CSR slots.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs><rect x="1" y="1" width="958" height="622" rx="16" fill="#ffffff" stroke="#d9e2ec" stroke-width="1.5"/>
+<text x="40" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="25" fill="#102a43" font-weight="700" text-anchor="start">Storing the factor inside A's own sparsity pattern</text>
+<text x="40" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15.5" fill="#52606d" font-weight="400" text-anchor="start">Same 5x5 sparse SPD matrix A, two ways to lay out its FSAI smoother factor G</text>
+<rect x="40" y="112" width="420" height="346" rx="12" fill="#f5f7fa" stroke="#d9e2ec" stroke-width="1"/>
+<text x="60" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="18" fill="#1f4e79" font-weight="700" text-anchor="start">Standard FSAI</text>
+<text x="60" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#52606d" font-weight="400" text-anchor="start">separate lower-triangular factor G</text>
+<rect x="72" y="190" width="36" height="36" rx="4" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="90.0" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">8 B</text>
+<rect x="112" y="190" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="152" y="190" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="192" y="190" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="232" y="190" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="72" y="230" width="36" height="36" rx="4" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="90.0" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">8 B</text>
+<rect x="112" y="230" width="36" height="36" rx="4" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="130.0" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">8 B</text>
+<rect x="152" y="230" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="192" y="230" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="232" y="230" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="72" y="270" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="112" y="270" width="36" height="36" rx="4" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="130.0" y="294" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">8 B</text>
+<rect x="152" y="270" width="36" height="36" rx="4" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="170.0" y="294" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">8 B</text>
+<rect x="192" y="270" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="232" y="270" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="72" y="310" width="36" height="36" rx="4" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="90.0" y="334" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">8 B</text>
+<rect x="112" y="310" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="152" y="310" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="192" y="310" width="36" height="36" rx="4" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="210.0" y="334" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">8 B</text>
+<rect x="232" y="310" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="72" y="350" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="112" y="350" width="36" height="36" rx="4" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="152" y="350" width="36" height="36" rx="4" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="170.0" y="374" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">8 B</text>
+<rect x="192" y="350" width="36" height="36" rx="4" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="210.0" y="374" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">8 B</text>
+<rect x="232" y="350" width="36" height="36" rx="4" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="250.0" y="374" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">8 B</text>
+<text x="292" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#1f2933" font-weight="700" text-anchor="start">Extra arrays</text>
+<rect x="292" y="218" width="14" height="34" rx="3" fill="#9fb3c8" stroke="none" stroke-width="1"/>
+<text x="314" y="233" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#1f2933" font-weight="700" text-anchor="start">row_ptr</text>
+<text x="314" y="250" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">int32, n+1</text>
+<rect x="292" y="270" width="14" height="34" rx="3" fill="#9fb3c8" stroke="none" stroke-width="1"/>
+<text x="314" y="285" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#1f2933" font-weight="700" text-anchor="start">col_idx</text>
+<text x="314" y="302" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">int32, nnz(G)</text>
+<rect x="292" y="322" width="14" height="34" rx="3" fill="#1f4e79" stroke="none" stroke-width="1"/>
+<text x="314" y="337" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#1f2933" font-weight="700" text-anchor="start">values</text>
+<text x="314" y="354" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">FP64, nnz(G)</text>
+<text x="60" y="430" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#52606d" font-weight="400" text-anchor="start">A already has row_ptr and col_idx. This adds a second set.</text>
+<rect x="500" y="112" width="420" height="346" rx="12" fill="#d8f1ed" stroke="#b4e2da" stroke-width="1"/>
+<text x="520" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="18" fill="#0a5c53" font-weight="700" text-anchor="start">BitFSAI</text>
+<text x="520" y="166" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="400" text-anchor="start">nibbles written into A's own CSR slots</text>
+<rect x="532" y="190" width="36" height="36" rx="4" fill="#ffffff" stroke="#0e8a7d" stroke-width="1.2"/>
+<text x="550.0" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="700" text-anchor="middle" font-style="italic">d</text>
+<rect x="572" y="190" width="36" height="36" rx="4" fill="#0e8a7d" stroke="none" stroke-width="1"/>
+<text x="590.0" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">4b</text>
+<rect x="612" y="190" width="36" height="36" rx="4" fill="none" stroke="#b4e2da" stroke-width="1"/>
+<rect x="652" y="190" width="36" height="36" rx="4" fill="#c77700" stroke="none" stroke-width="1"/>
+<text x="670.0" y="214" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#fff" font-weight="700" text-anchor="middle">g₃₀</text>
+<rect x="692" y="190" width="36" height="36" rx="4" fill="none" stroke="#b4e2da" stroke-width="1"/>
+<rect x="532" y="230" width="36" height="36" rx="4" fill="#0e8a7d" stroke="none" stroke-width="1"/>
+<text x="550.0" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">4b</text>
+<rect x="572" y="230" width="36" height="36" rx="4" fill="#ffffff" stroke="#0e8a7d" stroke-width="1.2"/>
+<text x="590.0" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="700" text-anchor="middle" font-style="italic">d</text>
+<rect x="612" y="230" width="36" height="36" rx="4" fill="#0e8a7d" stroke="none" stroke-width="1"/>
+<text x="630.0" y="254" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">4b</text>
+<rect x="652" y="230" width="36" height="36" rx="4" fill="none" stroke="#b4e2da" stroke-width="1"/>
+<rect x="692" y="230" width="36" height="36" rx="4" fill="none" stroke="#b4e2da" stroke-width="1"/>
+<rect x="532" y="270" width="36" height="36" rx="4" fill="none" stroke="#b4e2da" stroke-width="1"/>
+<rect x="572" y="270" width="36" height="36" rx="4" fill="#0e8a7d" stroke="none" stroke-width="1"/>
+<text x="590.0" y="294" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">4b</text>
+<rect x="612" y="270" width="36" height="36" rx="4" fill="#ffffff" stroke="#0e8a7d" stroke-width="1.2"/>
+<text x="630.0" y="294" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="700" text-anchor="middle" font-style="italic">d</text>
+<rect x="652" y="270" width="36" height="36" rx="4" fill="none" stroke="#b4e2da" stroke-width="1"/>
+<rect x="692" y="270" width="36" height="36" rx="4" fill="#0e8a7d" stroke="none" stroke-width="1"/>
+<text x="710.0" y="294" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">4b</text>
+<rect x="532" y="310" width="36" height="36" rx="4" fill="#c77700" stroke="none" stroke-width="1"/>
+<text x="550.0" y="334" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#fff" font-weight="700" text-anchor="middle">g₃₀</text>
+<rect x="572" y="310" width="36" height="36" rx="4" fill="none" stroke="#b4e2da" stroke-width="1"/>
+<rect x="612" y="310" width="36" height="36" rx="4" fill="none" stroke="#b4e2da" stroke-width="1"/>
+<rect x="652" y="310" width="36" height="36" rx="4" fill="#ffffff" stroke="#0e8a7d" stroke-width="1.2"/>
+<text x="670.0" y="334" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="700" text-anchor="middle" font-style="italic">d</text>
+<rect x="692" y="310" width="36" height="36" rx="4" fill="#0e8a7d" stroke="none" stroke-width="1"/>
+<text x="710.0" y="334" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">4b</text>
+<rect x="532" y="350" width="36" height="36" rx="4" fill="none" stroke="#b4e2da" stroke-width="1"/>
+<rect x="572" y="350" width="36" height="36" rx="4" fill="none" stroke="#b4e2da" stroke-width="1"/>
+<rect x="612" y="350" width="36" height="36" rx="4" fill="#0e8a7d" stroke="none" stroke-width="1"/>
+<text x="630.0" y="374" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">4b</text>
+<rect x="652" y="350" width="36" height="36" rx="4" fill="#0e8a7d" stroke="none" stroke-width="1"/>
+<text x="670.0" y="374" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">4b</text>
+<rect x="692" y="350" width="36" height="36" rx="4" fill="#ffffff" stroke="#0e8a7d" stroke-width="1.2"/>
+<text x="710.0" y="374" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="700" text-anchor="middle" font-style="italic">d</text>
+<text x="752" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#1f2933" font-weight="700" text-anchor="start">Stored fields</text>
+<rect x="752" y="218" width="14" height="34" rx="3" fill="#ffffff" stroke="#0e8a7d" stroke-width="1.2"/>
+<text x="774" y="233" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#1f2933" font-weight="700" text-anchor="start">d</text>
+<text x="774" y="250" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">FP32 diagonal</text>
+<rect x="752" y="270" width="14" height="34" rx="3" fill="#ffffff" stroke="#0e8a7d" stroke-width="1.2"/>
+<text x="774" y="285" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#1f2933" font-weight="700" text-anchor="start">s</text>
+<text x="774" y="302" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">FP32 row scale</text>
+<rect x="752" y="322" width="14" height="34" rx="3" fill="#0e8a7d" stroke="#0e8a7d" stroke-width="1.2"/>
+<text x="774" y="337" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#1f2933" font-weight="700" text-anchor="start">q</text>
+<text x="774" y="354" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">4-bit, nnz(A)</text>
+<text x="520" y="414" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#0a5c53" font-weight="400" text-anchor="start">Reuses A's row_ptr and col_idx (<tspan font-weight="700">0 extra index bytes</tspan>)</text>
+<text x="520" y="436" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#0a5c53" font-weight="400" text-anchor="start">Setup mirrors each amber coupling into both slots.</text>
+<text x="40" y="490" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15" fill="#1f2933" font-weight="700" text-anchor="start">Applying z = Gᵀ G r in two row-parallel passes (each off-diagonal decodes as s<tspan dy="4.2" font-size="10.8">i</tspan><tspan dy="-4.2">​</tspan> * nibble)</text>
+<rect x="40" y="504" width="430" height="92" rx="10" fill="#f5f7fa" stroke="#d9e2ec" stroke-width="1"/>
+<text x="60" y="532" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15" fill="#102a43" font-weight="700" text-anchor="start">Pass 1: t = G r</text>
+<text x="60" y="558" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="start">t<tspan dy="4.2" font-size="10.8">i</tspan><tspan dy="-4.2">​</tspan> = d<tspan dy="4.2" font-size="10.8">i</tspan><tspan dy="-4.2">​</tspan> r<tspan dy="4.2" font-size="10.8">i</tspan><tspan dy="-4.2">​</tspan> + s<tspan dy="4.2" font-size="10.8">i</tspan><tspan dy="-4.2">​</tspan> Σ<tspan dy="4.2" font-size="10.8">j&lt;i</tspan><tspan dy="-4.2">​</tspan> q<tspan dy="4.2" font-size="10.8">ij</tspan><tspan dy="-4.2">​</tspan> r<tspan dy="4.2" font-size="10.8">j</tspan><tspan dy="-4.2">​</tspan></text>
+<text x="60" y="582" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#52606d" font-weight="400" text-anchor="start">each row reads its lower-triangle slots</text>
+<rect x="490" y="504" width="430" height="92" rx="10" fill="#f5f7fa" stroke="#d9e2ec" stroke-width="1"/>
+<text x="510" y="532" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15" fill="#102a43" font-weight="700" text-anchor="start">Pass 2: z = Gᵀ t</text>
+<text x="510" y="558" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="start">z<tspan dy="4.2" font-size="10.8">j</tspan><tspan dy="-4.2">​</tspan> = d<tspan dy="4.2" font-size="10.8">j</tspan><tspan dy="-4.2">​</tspan> t<tspan dy="4.2" font-size="10.8">j</tspan><tspan dy="-4.2">​</tspan> + Σ<tspan dy="4.2" font-size="10.8">i&gt;j</tspan><tspan dy="-4.2">​</tspan> s<tspan dy="4.2" font-size="10.8">i</tspan><tspan dy="-4.2">​</tspan> q<tspan dy="4.2" font-size="10.8">ji</tspan><tspan dy="-4.2">​</tspan> t<tspan dy="4.2" font-size="10.8">i</tspan><tspan dy="-4.2">​</tspan></text>
+<text x="510" y="582" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#52606d" font-weight="400" text-anchor="start">each row reads mirrored upper slots as a row gather</text>
+</svg>

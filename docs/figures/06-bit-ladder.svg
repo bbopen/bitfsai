@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="t d"><title id="t">How low can the bits go</title><desc id="d">Bits per stored weight from FP64 down to zero-storage operators, separating GPU kernels from proved theoretical limits.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs><rect x="1" y="1" width="958" height="638" rx="16" fill="#ffffff" stroke="#d9e2ec" stroke-width="1.5"/>
+<text x="40" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="25" fill="#102a43" font-weight="700" text-anchor="start">How low can the bits go?</text>
+<text x="40" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15.5" fill="#52606d" font-weight="400" text-anchor="start">Bits per stored off-diagonal weight on a log scale. Sub-4-bit tiers are theory with no GPU kernel yet.</text>
+<text x="40" y="134" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="16" fill="#1f2933" font-weight="700" text-anchor="start">FP64</text>
+<text x="40" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">64 bits</text>
+<rect x="210" y="120" width="240.0" height="30" rx="5" fill="#9fb3c8" stroke="#9fb3c8" stroke-width="1.6"/>
+<text x="566" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#1f2933" font-weight="400" text-anchor="start">Standard factor weights</text>
+<text x="40" y="184" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="16" fill="#1f2933" font-weight="700" text-anchor="start">FP16</text>
+<text x="40" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">16 bits</text>
+<rect x="210" y="170" width="168.0" height="30" rx="5" fill="#9fb3c8" stroke="#9fb3c8" stroke-width="1.6"/>
+<text x="566" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#1f2933" font-weight="400" text-anchor="start">Where prior GPU sparse smoothers stop</text>
+<text x="40" y="234" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="16" fill="#1f2933" font-weight="700" text-anchor="start">FP8 E5M2</text>
+<text x="40" y="252" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">8 bits</text>
+<rect x="210" y="220" width="132.0" height="30" rx="5" fill="#0e8a7d" stroke="#0e8a7d" stroke-width="1.6"/>
+<rect x="462" y="223" width="84" height="24" rx="12" fill="#0e8a7d" stroke="#0e8a7d" stroke-width="1.2"/>
+<text x="504.0" y="239.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">ON GPU</text>
+<text x="566" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#1f2933" font-weight="400" text-anchor="start">Guarded coarse-grid operators</text>
+<text x="40" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="16" fill="#1f2933" font-weight="700" text-anchor="start">INT4</text>
+<text x="40" y="302" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">4 bits</text>
+<rect x="210" y="270" width="96.0" height="30" rx="5" fill="#0e8a7d" stroke="#0e8a7d" stroke-width="1.6"/>
+<rect x="462" y="273" width="84" height="24" rx="12" fill="#0e8a7d" stroke="#0e8a7d" stroke-width="1.2"/>
+<text x="504.0" y="289.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">ON GPU</text>
+<text x="566" y="290" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#1f2933" font-weight="400" text-anchor="start">BitFSAI smoother (FP32 diagonal, 4-bit off-diagonals)</text>
+<text x="40" y="334" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="16" fill="#1f2933" font-weight="700" text-anchor="start">Ternary</text>
+<text x="40" y="352" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">1.58 bits</text>
+<rect x="210" y="320" width="47.75728410248561" height="30" rx="5" fill="none" stroke="#c77700" stroke-width="1.6" stroke-dasharray="5 3"/>
+<rect x="462" y="323" width="84" height="24" rx="12" fill="#ffffff" stroke="#c77700" stroke-width="1.2"/>
+<text x="504.0" y="339.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#c77700" font-weight="700" text-anchor="middle">THEORY</text>
+<text x="566" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#1f2933" font-weight="400" text-anchor="start">Values {-1, 0, +1}, cut bound independent of contrast</text>
+<text x="40" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="16" fill="#1f2933" font-weight="700" text-anchor="start">Sign</text>
+<text x="40" y="402" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">1 bit</text>
+<rect x="210" y="370" width="24.0" height="30" rx="5" fill="none" stroke="#c77700" stroke-width="1.6" stroke-dasharray="5 3"/>
+<rect x="462" y="373" width="84" height="24" rx="12" fill="#ffffff" stroke="#c77700" stroke-width="1.2"/>
+<text x="504.0" y="389.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#c77700" font-weight="700" text-anchor="middle">THEORY</text>
+<text x="566" y="390" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#1f2933" font-weight="400" text-anchor="start">Values {-1, +1}, fails where ternary converges</text>
+<text x="40" y="434" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="16" fill="#1f2933" font-weight="700" text-anchor="start">Sub-bit</text>
+<text x="40" y="452" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">&lt; 1 bit</text>
+<rect x="210" y="420" width="14" height="30" rx="5" fill="none" stroke="#c77700" stroke-width="1.6" stroke-dasharray="5 3"/>
+<rect x="462" y="423" width="84" height="24" rx="12" fill="#ffffff" stroke="#c77700" stroke-width="1.2"/>
+<text x="504.0" y="439.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#c77700" font-weight="700" text-anchor="middle">THEORY</text>
+<text x="566" y="440" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#1f2933" font-weight="400" text-anchor="start">Shared codebooks with packing and covering bounds</text>
+<text x="40" y="484" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="16" fill="#1f2933" font-weight="700" text-anchor="start">Zero storage</text>
+<text x="40" y="502" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">0 bits</text>
+<circle cx="218" cy="485" r="7" fill="none" stroke="#c77700" stroke-width="1.6"/>
+<rect x="462" y="473" width="84" height="24" rx="12" fill="#ffffff" stroke="#c77700" stroke-width="1.2"/>
+<text x="504.0" y="489.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12" fill="#c77700" font-weight="700" text-anchor="middle">THEORY</text>
+<text x="566" y="490" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#1f2933" font-weight="400" text-anchor="start">Rebuild coefficients from physical laws on the fly</text>
+<line x1="40" y1="514" x2="920" y2="514" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="40" y="528" width="880" height="104" rx="12" fill="#fdf0d5" stroke="#f3d9a4" stroke-width="1"/>
+<text x="62" y="556" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14.5" fill="#c77700" font-weight="700" text-anchor="start">1-bit sign vs. 1.58-bit ternary on a 3-node grounded patch (BitLimits.lean)</text>
+<text x="62" y="582" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#1f2933" font-weight="400" text-anchor="start">Target row is (1, t) at t = 1/5. Sign-only forces t to +1 or -1, while ternary can round t to 0.</text>
+<text x="62" y="606" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.8" fill="#1f2933" font-weight="600" text-anchor="start">Sign-only hits local κ &gt; 9 and diverges like 2/t as t goes to 0. Ternary stays at κ &lt;= 3 and approaches 1.</text>
+</svg>

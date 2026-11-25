@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="t d"><title id="t">Why the diagonal stays in FP32</title><desc id="d">A 2 by 2 example proved in Lean. Diagonal-inclusive 4-bit rounding drives condition number above 321, while diagonal-split 4-bit recovers the exact factor.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs><rect x="1" y="1" width="958" height="638" rx="16" fill="#ffffff" stroke="#d9e2ec" stroke-width="1.5"/>
+<text x="40" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="25" fill="#102a43" font-weight="700" text-anchor="start">Why the diagonal stays in FP32</text>
+<text x="40" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15.5" fill="#52606d" font-weight="400" text-anchor="start">A 2x2 counterexample proved in proofs/lean/Bitfsai/Core.lean</text>
+<rect x="40" y="108" width="880" height="96" rx="12" fill="#f5f7fa" stroke="#d9e2ec" stroke-width="1"/>
+<text x="62" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="17" fill="#1f2933" font-weight="700" text-anchor="start">A =</text>
+<path d="M106,128 L100,128 L100,180 L106,180" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<path d="M236,128 L242,128 L242,180 L236,180" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<text x="139.0" y="148" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">1</text>
+<text x="203.0" y="148" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">0.04</text>
+<text x="139.0" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">0.04</text>
+<text x="203.0" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">0.0017</text>
+<text x="266" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#52606d" font-weight="400" text-anchor="start">SPD with a tiny second</text>
+<text x="266" y="172" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#52606d" font-weight="400" text-anchor="start">pivot: 0.0017 - 0.04² = 0.0001</text>
+<text x="476" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#52606d" font-weight="400" text-anchor="start">Exact</text>
+<text x="518" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="17" fill="#1f2933" font-weight="700" text-anchor="start">G =</text>
+<path d="M562,128 L556,128 L556,180 L562,180" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<path d="M664,128 L670,128 L670,180 L664,180" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<text x="588.0" y="148" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">1</text>
+<text x="638.0" y="148" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">0</text>
+<text x="588.0" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">-4</text>
+<text x="638.0" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">100</text>
+<text x="694" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="16" fill="#1f2933" font-weight="700" text-anchor="start">gives  G A Gᵀ = I,  κ = 1</text>
+<rect x="40" y="228" width="430" height="300" rx="12" fill="#fde7e4" stroke="#f5c2bb" stroke-width="1"/>
+<text x="60" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="18" fill="#b42318" font-weight="700" text-anchor="start">Diagonal-inclusive 4-bit</text>
+<text x="60" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#52606d" font-weight="400" text-anchor="start">one scale per row, shared with the diagonal</text>
+<text x="60" y="314" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14.5" fill="#1f2933" font-weight="400" text-anchor="start">Row 2 is (-4, 100), so scale = 100/7 = 14.29</text>
+<text x="60" y="338" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14.5" fill="#1f2933" font-weight="400" text-anchor="start">-4 / 14.29 = -0.28, which <tspan font-weight="700">rounds to 0</tspan></text>
+<text x="60" y="362" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14.5" fill="#1f2933" font-weight="400" text-anchor="start">The off-diagonal coupling vanishes</text>
+<text x="60" y="430" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15" fill="#1f2933" font-weight="700" text-anchor="start">G =</text>
+<path d="M100,400 L94,400 L94,452 L100,452" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<path d="M186,400 L192,400 L192,452 L186,452" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<text x="122.0" y="420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">1</text>
+<text x="164.0" y="420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">0</text>
+<text x="122.0" y="442" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">0</text>
+<text x="164.0" y="442" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">100</text>
+<text x="206" y="430" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15" fill="#1f2933" font-weight="700" text-anchor="start">G A Gᵀ =</text>
+<path d="M294,400 L288,400 L288,452 L294,452" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<path d="M368,400 L374,400 L374,452 L368,452" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<text x="313.0" y="420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">1</text>
+<text x="349.0" y="420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">4</text>
+<text x="313.0" y="442" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">4</text>
+<text x="349.0" y="442" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">17</text>
+<rect x="60" y="464" width="390" height="48" rx="8" fill="#ffffff" stroke="#f5c2bb" stroke-width="1"/>
+<text x="76" y="495" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="21" fill="#b42318" font-weight="800" text-anchor="start">κ &gt; 321</text>
+<text x="190" y="494" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#52606d" font-weight="400" text-anchor="start">vs. κ = 1 for the exact factor</text>
+<rect x="490" y="228" width="430" height="300" rx="12" fill="#d8f1ed" stroke="#b4e2da" stroke-width="1"/>
+<text x="510" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="18" fill="#0a5c53" font-weight="700" text-anchor="start">Diagonal-split 4-bit (BitFSAI)</text>
+<text x="510" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#52606d" font-weight="400" text-anchor="start">diagonal in FP32, off-diagonals get their own scale</text>
+<text x="510" y="314" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14.5" fill="#1f2933" font-weight="400" text-anchor="start">Diagonal 100 stays in FP32</text>
+<text x="510" y="338" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14.5" fill="#1f2933" font-weight="400" text-anchor="start">Off-diagonal scale is 4/7 with code -7</text>
+<text x="510" y="362" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14.5" fill="#1f2933" font-weight="400" text-anchor="start">(-7)(4/7) = -4 <tspan font-weight="700">exactly</tspan></text>
+<text x="510" y="430" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15" fill="#1f2933" font-weight="700" text-anchor="start">G =</text>
+<path d="M550,400 L544,400 L544,452 L550,452" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<path d="M636,400 L642,400 L642,452 L636,452" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<text x="572.0" y="420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">1</text>
+<text x="614.0" y="420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">0</text>
+<text x="572.0" y="442" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">-4</text>
+<text x="614.0" y="442" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">100</text>
+<text x="656" y="430" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15" fill="#1f2933" font-weight="700" text-anchor="start">G A Gᵀ =</text>
+<path d="M744,400 L738,400 L738,452 L744,452" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<path d="M818,400 L824,400 L824,452 L818,452" stroke="#1f2933" stroke-width="1.4" fill="none"/>
+<text x="763.0" y="420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">1</text>
+<text x="799.0" y="420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">0</text>
+<text x="763.0" y="442" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">0</text>
+<text x="799.0" y="442" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#1f2933" font-weight="400" text-anchor="middle">1</text>
+<rect x="510" y="464" width="390" height="48" rx="8" fill="#ffffff" stroke="#b4e2da" stroke-width="1"/>
+<text x="526" y="495" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="21" fill="#0a5c53" font-weight="800" text-anchor="start">κ = 1</text>
+<text x="640" y="494" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#52606d" font-weight="400" text-anchor="start">exact factor recovered</text>
+<rect x="40" y="548" width="880" height="72" rx="12" fill="#dbe7f3" stroke="#b8cde3" stroke-width="1"/>
+<text x="62" y="578" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14.5" fill="#1f2933" font-weight="400" text-anchor="start">For any matrix size, a lower-triangular G with positive diagonals makes GᵀG positive definite,</text>
+<text x="62" y="601" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14.5" fill="#1f2933" font-weight="400" text-anchor="start">regardless of how the 4-bit off-diagonals round. Round any diagonal entry to zero and GᵀG turns singular.</text>
+</svg>

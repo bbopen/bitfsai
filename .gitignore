@@ -1,0 +1,35 @@
+# Build & binary artifacts
+reference/test_bitfsai
+reference/test_row_projection
+reference/test_certified_damping
+reference/standalone_amg
+benchmarks/baselines/bench_amgx
+benchmarks/baselines/bench_ginkgo
+benchmarks/baselines/bench_hypre
+*.o
+*.so
+*.a
+
+# Lean 4 / Lake cache
+proofs/lean/.lake/
+
+# Python caches
+__pycache__/
+*.pyc
+.venv/
+
+# LaTeX build intermediates
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+
+# Raw local benchmark dumps (published trial archive in benchmarks/results/ is tracked)
+*.csv
+!benchmarks/results/*.csv
+*.log
+tmp/

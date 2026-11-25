@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="t d"><title id="t">Compressing the full multigrid hierarchy</title><desc id="d">V-cycle using a 4-bit BitFSAI smoother on every level, guarded FP8 E5M2 coarse operators with FP32 fallback, and a polynomial boost on every fourth level.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52606d"/></marker></defs><rect x="1" y="1" width="958" height="638" rx="16" fill="#ffffff" stroke="#d9e2ec" stroke-width="1.5"/>
+<text x="40" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="25" fill="#102a43" font-weight="700" text-anchor="start">Compressing the full multigrid hierarchy</text>
+<text x="40" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15.5" fill="#52606d" font-weight="400" text-anchor="start">Standalone CUDA-Graph engine using 4-bit smoothing and guarded FP8 coarse operators</text>
+<rect x="80.0" y="116" width="440" height="40" rx="8" fill="#dbe7f3" stroke="#b8cde3" stroke-width="1"/>
+<text x="300" y="141.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#1f4e79" font-weight="700" text-anchor="middle">Level 0: fine grid, A in FP64</text>
+<rect x="120.0" y="174" width="360" height="40" rx="8" fill="#d8f1ed" stroke="#b4e2da" stroke-width="1"/>
+<text x="300" y="199.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="700" text-anchor="middle">Level 1: coarse A<tspan dy="3.9" font-size="10.1">c</tspan><tspan dy="-3.9">​</tspan></text>
+<rect x="155.0" y="232" width="290" height="40" rx="8" fill="#d8f1ed" stroke="#b4e2da" stroke-width="1"/>
+<text x="300" y="257.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="700" text-anchor="middle">Level 2: coarse A<tspan dy="3.9" font-size="10.1">c</tspan><tspan dy="-3.9">​</tspan></text>
+<rect x="457.0" y="236" width="96" height="32" rx="16" fill="#fdf0d5" stroke="#f3d9a4" stroke-width="1"/>
+<text x="505.0" y="257" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13" fill="#c77700" font-weight="700" text-anchor="middle">2x boost</text>
+<rect x="185.0" y="290" width="230" height="40" rx="8" fill="#d8f1ed" stroke="#b4e2da" stroke-width="1"/>
+<text x="300" y="315.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="700" text-anchor="middle">Level 3: coarse A<tspan dy="3.9" font-size="10.1">c</tspan><tspan dy="-3.9">​</tspan></text>
+<rect x="210.0" y="348" width="180" height="40" rx="8" fill="#d8f1ed" stroke="#b4e2da" stroke-width="1"/>
+<text x="300" y="373.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="700" text-anchor="middle">Level 4: coarse A<tspan dy="3.9" font-size="10.1">c</tspan><tspan dy="-3.9">​</tspan></text>
+<rect x="230.0" y="406" width="140" height="40" rx="8" fill="#d8f1ed" stroke="#b4e2da" stroke-width="1"/>
+<text x="300" y="431.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#0a5c53" font-weight="700" text-anchor="middle">Level 5: coarsest</text>
+<line x1="104.0" y1="158" x2="144.0" y2="171" stroke="#52606d" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="456.0" y1="172" x2="496.0" y2="159" stroke="#52606d" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="144.0" y1="216" x2="179.0" y2="229" stroke="#52606d" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="421.0" y1="230" x2="456.0" y2="217" stroke="#52606d" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="179.0" y1="274" x2="209.0" y2="287" stroke="#52606d" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="391.0" y1="288" x2="421.0" y2="275" stroke="#52606d" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="209.0" y1="332" x2="234.0" y2="345" stroke="#52606d" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="366.0" y1="346" x2="391.0" y2="333" stroke="#52606d" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="234.0" y1="390" x2="254.0" y2="403" stroke="#52606d" stroke-width="1.6" marker-end="url(#arrow)"/>
+<line x1="346.0" y1="404" x2="366.0" y2="391" stroke="#52606d" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="50" y="266.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13" fill="#52606d" font-weight="400" text-anchor="middle" font-style="italic">restrict</text>
+<text x="548" y="324.8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13" fill="#52606d" font-weight="400" text-anchor="middle" font-style="italic">prolong</text>
+<text x="40" y="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#52606d" font-weight="400" text-anchor="start">Every nonterminal level smooths with the 4-bit BitFSAI smoother.</text>
+<text x="40" y="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#52606d" font-weight="400" text-anchor="start">The engine captures the preconditioner in a CUDA Graph. Depth shown is illustrative.</text>
+<rect x="590" y="112" width="330" height="236" rx="12" fill="#f5f7fa" stroke="#d9e2ec" stroke-width="1"/>
+<text x="608" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15.5" fill="#102a43" font-weight="700" text-anchor="start">FP8 E5M2 guard per coarse level</text>
+<circle cx="616" cy="165" r="3.8" fill="#0e8a7d" stroke="none" stroke-width="1.5"/>
+<text x="632" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#1f2933" font-weight="400" text-anchor="start">off-diagonals &lt;= 0 (M-matrix)</text>
+<circle cx="616" cy="189" r="3.8" fill="#0e8a7d" stroke="none" stroke-width="1.5"/>
+<text x="632" y="194" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#1f2933" font-weight="400" text-anchor="start">every connected component grounded</text>
+<circle cx="616" cy="213" r="3.8" fill="#0e8a7d" stroke="none" stroke-width="1.5"/>
+<text x="632" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14" fill="#1f2933" font-weight="400" text-anchor="start">magnitudes in normal E5M2 range</text>
+<text x="632" y="242" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#1f2933" font-weight="400" text-anchor="start">[2⁻¹⁴, 57344]</text>
+<text x="610" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#0a5c53" font-weight="600" text-anchor="start">Pass: repair diagonal row sums (keeps</text>
+<text x="610" y="299" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#0a5c53" font-weight="600" text-anchor="start">A·1 unchanged) and store values in FP8</text>
+<text x="610" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#c77700" font-weight="600" text-anchor="start">Fail: keep that level in FP32</text>
+<rect x="590" y="362" width="330" height="128" rx="12" fill="#fdf0d5" stroke="#f3d9a4" stroke-width="1"/>
+<text x="608" y="390" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="15.5" fill="#c77700" font-weight="700" text-anchor="start">Sparse-depth boost (poly4@2)</text>
+<text x="608" y="416" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#1f2933" font-weight="400" text-anchor="start">On every 4th level starting at level 2,</text>
+<text x="608" y="436" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13.5" fill="#1f2933" font-weight="400" text-anchor="start">run the coarse correction twice:</text>
+<text x="608" y="462" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#1f2933" font-weight="400" text-anchor="start">K = 2t B - t² B A B,  t = 1.25</text>
+<text x="608" y="481" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="12.5" fill="#52606d" font-weight="400" text-anchor="start">other levels stay a plain V-cycle</text>
+<rect x="40" y="520" width="880" height="102" rx="12" fill="#dbe7f3" stroke="#b8cde3" stroke-width="1"/>
+<text x="62" y="548" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="14.5" fill="#102a43" font-weight="700" text-anchor="start">Measured on 192³ (7.08M unknowns, 10⁴ contrast), NVIDIA RTX Spark N1X</text>
+<text x="62" y="586" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="25" fill="#0a5c53" font-weight="800" text-anchor="start">28 to 13</text>
+<text x="62" y="608" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13" fill="#1f2933" font-weight="400" text-anchor="start">PCG iterations</text>
+<text x="276" y="586" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="25" fill="#0a5c53" font-weight="800" text-anchor="start">1.53x</text>
+<text x="276" y="608" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13" fill="#1f2933" font-weight="400" text-anchor="start">faster GPU solve</text>
+<text x="490" y="586" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="25" fill="#0a5c53" font-weight="800" text-anchor="start">1.86x</text>
+<text x="490" y="608" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13" fill="#1f2933" font-weight="400" text-anchor="start">smaller coarse buffers</text>
+<text x="704" y="586" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="25" fill="#0a5c53" font-weight="800" text-anchor="start">3.51x</text>
+<text x="704" y="608" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="13" fill="#1f2933" font-weight="400" text-anchor="start">less smoother + coarse storage*</text>
+<text x="898" y="548" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Liberation Sans', sans-serif" font-size="11.5" fill="#52606d" font-weight="400" text-anchor="end">*vs. FP64 factor (values + indices) + FP32 coarse</text>
+</svg>
